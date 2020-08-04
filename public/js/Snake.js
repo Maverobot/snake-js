@@ -24,7 +24,7 @@ export default class Snake {
 
     this.positionApple();
 
-    scene.input.keyboard.on("keydown", (e) => {
+    scene.input.keyboard.on('keydown', (e) => {
       this.keydown(e);
     });
   }
@@ -43,21 +43,25 @@ export default class Snake {
   keydown(event) {
     switch (event.keyCode) {
       case 37: // Left
+      case 65:
         if (this.direction !== Phaser.Math.Vector2.RIGHT) {
           this.direction = Phaser.Math.Vector2.LEFT;
         }
         break;
       case 38: // Up
+      case 87:
         if (this.direction !== Phaser.Math.Vector2.DOWN) {
           this.direction = Phaser.Math.Vector2.UP;
         }
         break;
       case 39: // Right
+      case 68:
         if (this.direction !== Phaser.Math.Vector2.LEFT) {
           this.direction = Phaser.Math.Vector2.RIGHT;
         }
         break;
       case 40: // Down
+      case 83:
         if (this.direction !== Phaser.Math.Vector2.UP) {
           this.direction = Phaser.Math.Vector2.DOWN;
         }
